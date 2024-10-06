@@ -1,0 +1,70 @@
+### Create new Account with custom name
+POST http://localhost:8080/account/createNewAccount
+Content-Type: application/json
+
+{
+  "ownerName": "Dmytro"
+}
+
+### Update account with data by account number
+POST http://localhost:8080/account/update/20670b23-2be2-4ab4-aada-7e394cf689bc
+Content-Type: application/json
+
+{
+  "ownerName": "Oleksiy",
+  "balance": "423",
+  "currency": "USD",
+  "createdAt": "2024-10-06T18:49:43"
+}
+
+### Delete account by account number
+POST http://localhost:8080/account/delete/6f806ef6-8403-4f8e-ba54-2e0ee5839cb7
+Content-Type: application/json
+
+### Find all accounts
+GET http://localhost:8080/account/getAllAccounts
+Content-Type: application/json
+
+### Find account by account number
+GET http://localhost:8080/account/2630b106-f6c1-428c-9a15-20abd0a5c6c6
+Content-Type: application/json
+
+### Create deposit transaction
+POST http://localhost:8080/transaction/deposit
+Content-Type: application/json
+
+{
+  "transactionType": "DEPOSIT",
+  "accountNumber": "2630b106-f6c1-428c-9a15-20abd0a5c6c6",
+  "amount": "15.05",
+  "fromAccountNumber": "",
+  "toAccountNumber": ""
+}
+
+### Create withdraw transaction
+POST http://localhost:8080/transaction/withdraw
+Content-Type: application/json
+
+{
+  "transactionType": "WITHDRAWAL",
+  "accountNumber": "2630b106-f6c1-428c-9a15-20abd0a5c6c6",
+  "amount": "2",
+  "fromAccountNumber": "",
+  "toAccountNumber": ""
+}
+
+### Create transfer transaction
+POST http://localhost:8080/transaction/transfer
+Content-Type: application/json
+
+{
+  "transactionType": "TRANSFER",
+  "accountNumber": "",
+  "amount": "13.05",
+  "fromAccountNumber": "2630b106-f6c1-428c-9a15-20abd0a5c6c6",
+  "toAccountNumber": "cb9d0e01-c97d-457f-9dfd-ed9d19452357"
+}
+
+### Delete transaction by id
+POST http://localhost:8080/transaction/delete/2
+Content-Type: application/json
