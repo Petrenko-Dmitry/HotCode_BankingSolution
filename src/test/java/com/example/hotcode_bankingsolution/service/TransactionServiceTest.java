@@ -1,6 +1,5 @@
 package com.example.hotcode_bankingsolution.service;
 
-import com.example.hotcode_bankingsolution.entity.Account;
 import com.example.hotcode_bankingsolution.entity.Transaction;
 import com.example.hotcode_bankingsolution.exception.NotFoundException;
 import com.example.hotcode_bankingsolution.repository.TransactionRepository;
@@ -9,7 +8,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-import static com.example.hotcode_bankingsolution.constants.StringConstants.ACCOUNT_NOT_FOUND_FORMAT;
 import static com.example.hotcode_bankingsolution.constants.StringConstants.TRANSACTION_NOT_FOUND_FORMAT;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

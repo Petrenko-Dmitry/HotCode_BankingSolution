@@ -1,7 +1,6 @@
 package com.example.hotcode_bankingsolution.entity;
 
 import com.example.hotcode_bankingsolution.dto.AccountDTO;
-import com.example.hotcode_bankingsolution.enums.Currency;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -19,7 +18,6 @@ import static com.example.hotcode_bankingsolution.entity.Account.newAccount;
 import static com.example.hotcode_bankingsolution.enums.Currency.USD;
 import static java.math.BigDecimal.ZERO;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.LIST;
 
 public class AccountTest {
 
